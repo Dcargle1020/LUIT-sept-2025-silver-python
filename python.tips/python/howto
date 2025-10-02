@@ -1,0 +1,138 @@
+# Python in GitHub Codespaces — Cheat Sheet
+
+A quick reference for running Python projects in **GitHub Codespaces** using **VS Code in the browser**.
+
+---
+
+## 🚀 Getting Started
+
+1. Open your repo in GitHub.  
+2. Click **Code** → **Codespaces** → **New Codespace**.  
+3. Wait for VS Code to load in the browser.  
+
+---
+
+## 📂 Basic Workflow
+
+### Create and Run a File
+
+1. Create a file: `hello.py`  
+2. Add code:
+
+```python
+print("Hello from Codespaces!")
+```
+
+3. Run in terminal:
+
+```bash
+python hello.py
+```
+
+---
+
+## 🔄 Git & GitHub in Codespaces
+
+### GUI (VS Code)
+1. Open **Source Control** sidebar.  
+2. Stage your file(s).  
+3. Write a commit message.  
+4. Click ✔️ Commit.  
+5. Click "Sync Changes" to push to GitHub.  
+
+### Terminal
+```bash
+git add .
+git commit -m "Message here"
+git push
+```
+
+---
+
+## ⌨️ Handy Shortcuts
+
+- **Command Palette:** `Ctrl+Shift+P` (Win/Linux), `Cmd+Shift+P` (Mac)  
+- **Toggle Terminal:** `` Ctrl+` ``  
+- **Run file in terminal:** Right-click file → *Run Python File in Terminal*  
+- **Rename variable/function:** `F2`  
+- **Format document:** `Shift+Alt+F`  
+
+---
+
+## 🐍 Python Essentials
+
+- **f-strings:**
+  ```python
+  name = "Dom"
+  print(f"Hello {name}")
+  ```
+
+- **List comprehension:**
+  ```python
+  nums = [x*x for x in range(5)]
+  ```
+
+- **Dictionary safe get:**
+  ```python
+  settings = {"theme": "dark"}
+  print(settings.get("mode", "default"))
+  ```
+
+- **Main entry point:**
+  ```python
+  def main():
+      print("App running")
+
+  if __name__ == "__main__":
+      main()
+  ```
+
+---
+
+## 🧪 Testing with Pytest
+
+1. Install pytest (once):  
+   ```bash
+   pip install pytest
+   ```
+
+2. Create `tests/test_sample.py`:
+
+   ```python
+   def test_addition():
+       assert 2 + 2 == 4
+   ```
+
+3. Run tests:  
+   ```bash
+   pytest -q
+   ```
+
+---
+
+## 🐞 Debugging
+
+1. Set a **breakpoint** (click left margin in VS Code).  
+2. Press **Run and Debug** (`F5`).  
+3. Step through code and inspect variables.  
+
+---
+
+## 🧹 .gitignore Example
+
+Keep repos clean by ignoring extra files:
+
+```
+__pycache__/
+*.pyc
+.vscode/
+.env
+```
+
+---
+
+✅ With this cheat sheet, you can:  
+- Run Python in Codespaces  
+- Use Git/GitHub commits  
+- Debug & test Python apps  
+- Keep your repo clean and organized  
