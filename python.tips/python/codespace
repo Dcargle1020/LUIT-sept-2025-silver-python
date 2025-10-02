@@ -1,0 +1,58 @@
+# GitHub Codespaces Fact Sheet
+
+## 🌐 What is GitHub Codespaces?
+GitHub Codespaces is a cloud-powered development environment that runs directly in your browser or locally in Visual Studio Code.  
+It provides a full dev environment without requiring you to install dependencies on your local machine.
+
+---
+
+## ⚙️ Key Features
+- Cloud-based dev environment accessible in the browser or VS Code.  
+- Pre-configured containers with support for Python, Node.js, Java, C#, Go, and more.  
+- Integrated with GitHub repositories.  
+- Customizable with `devcontainer.json` for dependencies and extensions.  
+- Works across devices (Windows, Mac, Linux, Chromebook).  
+- Includes terminal access, debugger, and Git integration.  
+
+---
+
+## ✅ Pros for Developers
+- **Zero setup:** Start coding instantly without local installs.  
+- **Cross-platform:** Works on any device with a browser.  
+- **Consistency:** Same environment across team members.  
+- **Scalable environments:** Add CPU/memory as needed.  
+- **Pre-installed tools:** Git, Docker, Python, Node.js, etc.  
+- **Tight GitHub integration:** Commit, branch, and PR workflows built-in.  
+- **Great for education & onboarding:** New devs can start without complex setup.  
+
+---
+
+## ❌ Cons for Developers
+- **Cost:** Limited free hours per month, paid for heavier usage.  
+- **Performance limits:** May be slower than a powerful local machine.  
+- **Internet required:** Offline work is not possible.  
+- **Storage/timeout limits:** Inactive environments shut down.  
+- **Not full local control:** Some hardware integrations or local testing are limited.  
+- **Learning curve:** Developers may need time to adjust from local workflows.  
+
+---
+
+## 💡 When to Use Codespaces
+- Quick prototyping or coding on a new device.  
+- Collaborative projects where environment consistency is important.  
+- Teaching, workshops, or onboarding new developers.  
+- Testing on different environments without local clutter.  
+
+---
+
+## 🚫 When Not Ideal
+- Heavy workloads requiring lots of CPU/GPU (e.g., ML training).  
+- Offline development or areas with poor internet.  
+- Projects that rely on specialized local hardware.  
+
+---
+
+✅ **Summary:**  
+GitHub Codespaces is a **powerful, flexible dev environment** that shines for collaboration, onboarding, and cross-platform work.  
+However, it may not fully replace a powerful local development machine for heavy tasks.  
+
