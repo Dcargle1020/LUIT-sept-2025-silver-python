@@ -1,0 +1,134 @@
+# Python Practice Project (GitHub Codespaces)
+
+This repo is for practicing Python inside **GitHub Codespaces** with **VS Code**.  
+It includes tips, examples, and a starter workflow for editing, running, and committing code.
+
+---
+
+## 1 — Run Your First Python File
+
+Create a file named `hello.py`:
+
+```python
+# hello.py
+print("Hello from Codespaces!")
+```
+
+Run it in the terminal:
+
+```bash
+python hello.py
+```
+
+---
+
+## 2 — Git Workflow in Codespaces
+
+1. Make a change in a file.  
+2. Open **Source Control** panel (left sidebar).  
+3. Stage the file(s).  
+4. Write a commit message like `Add hello.py`.  
+5. Click **Commit** (✔️).  
+6. Click **Sync Changes** to push to GitHub.  
+
+Command line alternative:
+
+```bash
+git add .
+git commit -m "My first commit from Codespaces"
+git push
+```
+
+---
+
+## 3 — VS Code Shortcuts (Browser or Codespaces)
+
+- **Command Palette:** `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)  
+- **Toggle terminal:** `` Ctrl+` ``  
+- **Format document:** `Shift+Alt+F`  
+- **Rename variable/function:** `F2`  
+- **Run Python file:** Right-click → *Run Python File in Terminal*  
+
+---
+
+## 4 — Python Tips & Tricks
+
+- **f-strings (easy printing):**
+  ```python
+  name = "Dom"
+  print(f"Hello, {name}!")
+  ```
+
+- **List comprehension:**
+  ```python
+  squares = [x*x for x in range(5)]
+  ```
+
+- **Safe dictionary access:**
+  ```python
+  mydict = {"a": 1}
+  value = mydict.get("b", "default")
+  ```
+
+- **Main entry point pattern:**
+  ```python
+  def main():
+      print("Running app...")
+
+  if __name__ == "__main__":
+      main()
+  ```
+
+---
+
+## 5 — Testing with Pytest
+
+Create a folder `tests/` and add a file `test_sample.py`:
+
+```python
+# tests/test_sample.py
+def test_math():
+    assert 2 + 2 == 4
+```
+
+Run tests in terminal:
+
+```bash
+pytest -q
+```
+
+---
+
+## 6 — Debugging in VS Code
+
+1. Set a **breakpoint** (click left margin of editor).  
+2. Press **Run and Debug** (▶️ icon on left or `F5`).  
+3. Use the Debug Console to inspect variables.  
+
+---
+
+## 7 — Formatting & Clean Code
+
+- Enable **Format on Save**:  
+  - Command Palette → `Preferences: Open Settings (UI)` → search `format on save` → enable.  
+- Use the built-in Python extension for linting and IntelliSense.  
+
+---
+
+## 8 — .gitignore Example
+
+Add a `.gitignore` file to keep your repo clean:
+
+```
+__pycache__/
+*.pyc
+.vscode/
+```
+
+---
+
+✅ That’s it!  
+This project gives you a **simple workflow** to:  
+- Run Python in Codespaces  
+- Test Git commits and pushes  
+- Practice clean coding habits in VS Code  
