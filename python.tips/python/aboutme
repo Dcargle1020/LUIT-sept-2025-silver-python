@@ -1,0 +1,58 @@
+# about_me.py
+"""About Me script
+A small, friendly Python script that prints an 'About Me' summary.
+Includes options for plain text or JSON output via a command-line flag.
+
+Usage:
+    python about_me.py          # prints human-readable text
+    python about_me.py --json   # prints JSON-formatted output
+"""
+
+import json
+import argparse
+
+def get_profile():
+    return {
+        "name": "Dominique Cargle",
+        "role": "Aspiring Cloud Engineer & AI Enthusiast",
+        "location": "United States",
+        "skills": [
+            "Python", "Linux", "AWS", "Terraform", "Docker", "Git", "GitHub Codespaces"
+        ],
+        "goals": [
+            "Build hands-on cloud projects",
+            "Develop AI + automation skills",
+            "Transition into a cloud/AI engineering role"
+        ]
+    }
+
+def print_text(profile):
+    print("=== About Me ===")
+    print(f"Name: {profile['name']}")
+    print(f"Role: {profile['role']}")
+    if profile.get('location'):
+        print(f"Location: {profile['location']}")
+    print("\nSkills:")
+    for s in profile['skills']:
+        print(f" - {s}")
+    print("\nGoals:")
+    for g in profile['goals']:
+        print(f" - {g}")
+
+def print_json(profile):
+    print(json.dumps(profile, indent=2))
+
+def main():
+    parser = argparse.ArgumentParser(description='Print an About Me summary.')
+    parser.add_argument('--json', action='store_true', help='Output as JSON')
+    args = parser.parse_args()
+
+    profile = get_profile()
+    if args.json:
+        print_json(profile)
+    else:
+        print_text(profile)
+
+if __name__ == '__main__':
+    main()
+
